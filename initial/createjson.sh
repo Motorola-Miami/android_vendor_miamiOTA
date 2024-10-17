@@ -37,6 +37,7 @@ zip_only=`basename "$zip_name"`
 md5=`md5sum "$zip_name" | cut -d' ' -f1`
 sha256=`sha256sum "$zip_name" | cut -d' ' -f1`
 size=`stat -c "%s" "$zip_name"`
+security_id=`grep -r ro.build.id $buildprop | cut -d "=" -f 2 | cut -d "." -f 2`
 version=`echo "$zip_only" | cut -d'-' -f5`
 v_max=`echo "$version" | cut -d'.' -f1 | cut -d'v' -f2`
 v_min=`echo "$version" | cut -d'.' -f2`
@@ -54,6 +55,7 @@ echo '{
         "md5": "'$md5'",
         "sha256": "'$sha256'",
         "size": '$size',
+        "security_id": '$security_id',
         "version": "'$version'",
         "buildtype": "'$buildtype'",
         "forum": "'$forum'",
