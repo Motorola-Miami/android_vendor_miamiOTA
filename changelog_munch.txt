@@ -1,7 +1,0 @@
-Highlights & Device Specific Changes:
-Device: Xiaomi Poco f4 (munch)
-Device maintainer: Erwin (erwinabs)
-Required firmware: Latest Global FW
-
-===== 24-08-24 =====
-- Bump Version  5.2

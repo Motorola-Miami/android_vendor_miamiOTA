@@ -1,6 +1,5 @@
-# RisingOS OTA repo
-In order for a device to be officially supported by RisingOS, OTA information needs to be added.
-Please refer to the following "Readme" to get started
+# Miami OTA repo
+This repo is to provide OTA updates to Motorola Edge 30 Neo (miami) devices.
 
 ## 1. Introduction ##
 In order for a device to be OTA compliant, there are a few things to know.
@@ -13,25 +12,25 @@ In order for a device to be OTA compliant, there are a few things to know.
         "maintainer": "Name (nickname)",
         "oem": "OEM",
         "device": "Device Name",
-        "filename": "RisingOS-<version>-<type>-<date>-<variant>-OFFICIAL-<device codename>.zip",
-        "download": "https://sourceforge.net/projects/risingos-official/files/<version>/<variant>/<device codename>/RisingOS-<version>-<type>-<date>-<variant>-OFFICIAL-<device codename>.zip/download",
+        "filename": "ROM-<version>-<type>-<date>-<variant>-UNOFFICIAL-miami.zip",
+        "download": "https://github.com/Motorola-Miami/miami_releases/releases/download/<tag>/<Name_of_the_ROM_file.zip",
         "timestamp": 0000000000,
         "md5": "abcdefg123456",
         "sha256": "abcdefg123456",
         "size": 123456789,
-        "version": "<crversion>",
+        "version": "<ROM-Version>",
         "buildtype": "Testing/Alpha/Beta/Weekly/Monthly",
         "forum": "https://forum link",
         "gapps": "https://gapps link",
         "firmware": "https://firmware link",
         "modem": "https://modem link",
         "bootloader": "https://bootloader link",
-        "recovery": "https://recovery link",
+        "recovery": "https://github.com/Motorola-Miami/miami_releases/releases/download/%232/TWRP.img",
         "paypal": "https://donation link",
-        "telegram": "https://telegram link",
-        "dt": "https://github.com/RisingOSS-devices/android_device_<oem>_<device_codename>",
-        "common-dt": "https://github.com/RisingOSS-devices/android_device_<orm>_<SOC>-common",
-        "kernel": "https://github.com/RisingOSS-devices/android_kernel_<oem>_<SOC>"
+        "telegram": "https://t.me/motoedge30neoglobal",
+        "dt": "https://github.com/Motorola-Miami/android_device_motorola_miami",
+        "common-dt": "https://github.com/Motorola-Miami/android_device_motorola_sm6375-common",
+        "kernel": "https://github.com/Motorola-Miami/android_kernel_motorola_sm6375"
     }
   ]
 }
@@ -41,9 +40,8 @@ In order for a device to be OTA compliant, there are a few things to know.
 ```
 Highlights & Device Specific Changes:
 Build type: Testing/Alpha/Beta/Weekly/Monthly
-Device: Device name (<device codename>)
-Device maintainer: Name (nickname)
-Required firmware: add if any else remove this line
+Device: Motoroala Edge 30 Neo
+Device maintainer: <Your_Name>
 
 ===== <date> =====
 - change 1
@@ -52,45 +50,18 @@ Required firmware: add if any else remove this line
 ```
 
 ## 2 Guidelines ##
-* Check if your device has all [requirements](https://github.com/RisingOSS-devices/official/blob/main/devicereq.md) to be officially supported
-* Check if manufacturer already exists
-* Check if published link is official
 * Check if JSON is intact with help of online validator tools like [jsonformatter.curiousconcept](https://jsonformatter.curiousconcept.com) or [jsonformatter](https://jsonformatter.org)
 * Check if no extra / missing spaces
+* If you're not hosting the ROM on Motorola-Miami Github/Sourceforge then :-
+  - Hosting on Google Drive is not allowed.
+  - Temporary hosting is not allowed.
 
-## 3. How to ##
-For following below description, replace *codename* with your device codename. 
-### 3.1 Initial support ###
-After you contacted [Lord Itachi on Telegram](https://t.me/manid_reddy), and have the approval, follow the below steps.
+### 3 Initial support ###
+After you have build and booted the ROM for which you wanna provide OTA updates for
+1. Make sure you read [this](https://github.com/Motorola-Miami/android_miami_packages_apps_Updater) OTA updater repo and apply the modification while building instead of the default one synced from ROM's source or unofficial OTA will not work.
+1. Contact @Rakhshan7070 on [Telegram](https://t.me/shan_rakh) or Email (alirakhshan7070@gmail.com) if you want to release your build on Motorola-Miami github organisation or Motorola-Miami Sourceforge. If you want to host it somewhere else then skip this point.
 1. Fork this repo to your own GitHub account and clone it locally.
-2. Copy file [**createjson.sh**](./initial/createjson.sh) from *initial support* folder to RisingOS source folder and make it executable
-```
-chmod +x createjson.sh
-```
-3. Open the file in a text editor (vim, nano, any GUI editor) and make changes from where it states *#modify values below*, save the file then run the generation script with below command
-```
-./createjson.sh
-```
-4. A file named *codename*.json gets created in main RisingOS source folder. Copy it to where this repo was cloned.
-5. Create a file named changelog_*codename*.txt based on changelog structure from point 1.2, and add your changelog in it.
+2. Create changelog_<ROM>.txt and <VANILLA/GAPPS/CORE>_<ROM>.json
+3. Modify the files accordingly. (see 1.1)
 6. Submit a pull request to this repo (this way we validate that you understood the requirements and if all is good you'll be granted direct push access to this repo)
 
-### 3.2 Update build ###
-1. Clone this repo locally
-```
-git clone https://github.com/RisingOSS-devices/android_vendor_RisingOTA.git -b fourteen
-```
-2. Change to the directory where you cloned this repo (android_vendor_RisingOSOTA) and fetch updates from repo.
-```
-cd android_vendor_RisingOTA
-git fetch --all
-git pull
-```
-3. Copy *codename*.json file from out dir (where your RisingOS zip is compiled) over to this repo folder (android_vendor_RisingOTA).
-4. Make changes to changelog_*codename*.txt and save it.
-5. Now with the files updated, commit your update to this repo.
-```
-git add .
-git commit #(this opens up your prefered text editor, so write a nice description like "<device codename>: update build")
-git push #you may be prompted for your github username and password
-```

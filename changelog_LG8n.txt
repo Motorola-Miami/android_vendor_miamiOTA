@@ -1,8 +1,0 @@
-Highlights & Device Specific Changes:
-Build type: Weekly
-Device: TECNO POVA 4 Pro (LG8n)
-Device maintainer: Ren (Shirayuki39/Shirayuki428)
-
-===== 09-18-2024 =====
-- RisingOS 5.2.1 Changes
-- Fix LTE-CA

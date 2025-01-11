@@ -1,8 +1,0 @@
-Highlights & Device Specific Changes:
-Build type: Monthly
-Device: Generic System Image (GSI)
-Device maintainer: ItsLynix (UniversalX)
-
-===== 06-09-2024 =====
-- Rising v5.2.1 Changes (Again, Final build of A14)
-- Stability improvements from 5.2.1
