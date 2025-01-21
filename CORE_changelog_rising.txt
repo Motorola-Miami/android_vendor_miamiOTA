@@ -1,0 +1,15 @@
+Highlights & Device Specific Changes:
+Build type: Weekly
+Device: Motorola Edge 30 Neo (miami)
+Device maintainer: Rakhshan
+
+====================
+     21-01-2025
+====================
+- KernelSU Prebuilt
+- Added Viper4Fx
+- Pixel Launcher Prebuilt
+- Synced with risingOS v6.2
+- Initial Gapps-Core Build
+
+
