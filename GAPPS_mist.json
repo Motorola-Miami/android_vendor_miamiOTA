@@ -1,0 +1,27 @@
+{
+	"response": [
+		{
+			"maintainer": "Bashid Akhtan",
+			"oem": "Motorola",
+			"device": "Edge 30 Neo",
+			"filename": "",
+			"download": "",
+			"timestamp": ,
+			"md5": "",
+			"sha256": "",
+			"size": ,
+			"version": "",
+			"buildtype": "",
+			"forum": "",
+			"firmware": "",
+			"modem": "",
+			"bootloader": "",
+			"recovery": "https://github.com/Motorola-Miami/miami_releases/releases/download/%232/TWRP.img",
+			"paypal": "",
+			"telegram": "https://t.me/motoedge30neoglobal",
+			"dt": "https://github.com/Motorola-Miami/android_device_motorola_miami",
+			"common-dt": "https://github.com/Motorola-Miami/android_device_motorola_sm6375-common",
+			"kernel": "https://github.com/Motorola-Miami/android_kernel_motorola_sm6375"
+		}
+	]
+}
