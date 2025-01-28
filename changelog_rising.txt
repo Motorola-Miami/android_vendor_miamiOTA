@@ -10,6 +10,13 @@ Device maintainer: Rakhshan
 - Added Viper4Fx
 - Pixel Launcher Prebuilt
 - Synced with risingOS v6.2
-- Initial Gapps-Core Build
+- Initial Gapps-Core Support
 
-
+====================
+     13-01-2025
+====================
+- Synced with risingOS v6.2
+- Fixed DT2W (Doubt tap to wake)
+- Fixed Screen off UDFPS
+- January Security Patch (QPR1)
+- Fixed issue with Circle to Search on Ortus Launcher
