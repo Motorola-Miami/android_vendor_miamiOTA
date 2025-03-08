@@ -4,6 +4,23 @@ Device: Motorola Edge 30 Neo (miami)
 Device maintainer: Rakhshan
 
 ====================
+     08-02-2025
+====================
+- RisingOS Revived Initial Release
+- Fixed USB Tethering
+- Fixed DT2W (Doubt tap to wake)
+- Fixed Screen off UDFPS
+- February Security Patch (QPR1)
+- Switched to New Kernel
+- Improved Performance (Kernel Stuff)
+- Switch to new trees based on sm7325
+- Improved Battery Backup
+- Added support for Lineage live display
+- Update KernelSU Next to v1.0.5
+- Fixed fake widewine info
+- Added support for susfs v1.5.5
+
+====================
      21-01-2025
 ====================
 - KernelSU Prebuilt
